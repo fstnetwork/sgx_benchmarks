@@ -68,10 +68,10 @@ endif
 
 ifeq ($(SGX_DEBUG), 1)
         SGX_COMMON_CFLAGS += -O0 -g
-        SGXSSL_LIB_DIR := $(SGX_SSL)/lib64/debug/
+        SGXSSL_LIB_DIR := $(SGX_SSL)/lib64/
 else
         SGX_COMMON_CFLAGS += -O2
-        SGXSSL_LIB_DIR := $(SGX_SSL)/lib64/release/
+        SGXSSL_LIB_DIR := $(SGX_SSL)/lib64/
 endif
 
 ifeq ($(SUPPLIED_KEY_DERIVATION), 1)
